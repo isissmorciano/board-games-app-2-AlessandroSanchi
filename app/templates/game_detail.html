@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<article>
+    <header>
+        <h1>{{ game['nome'] }}</h1>
+        <h1>{{ game['numero_giocatori_massimo'] }}</h1>
+    </header>
+</article>
+<hr>
+
+<a href="{{ url_for('main.index') }}">Torna ai canali</a>
+{% endblock %}
