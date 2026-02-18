@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Crea nuovo gioco</h1>
+<form method="post">
+    <label for="nome">Nome del gioco</label>
+    <input name="nome" id="nome" required>
+    <br><br>
+    <label for="categoria">Categoria</label>
+    <input name="categoria" id="categoria" required>
+    <br><br>
+    <label for="numero_giocatori_massimo">Numero massimo di giocatori</label>
+    <input name="numero_giocatori_massimo" id="numero_giocatori_massimo" type="number" value="2" min="2">
+    <br><br>
+    
+    <label for="durata_media">Durata_media</label>
+    <input name="durata_media" id="durata_media" required>
+    <br><br>
+    <input type="submit" value="Crea Gioco">
+</form>
+
+
+
+
+<hr>
+<a href="{{ url_for('main.index') }}">Torna ai giochi</a>
+
+
+{% endblock %}

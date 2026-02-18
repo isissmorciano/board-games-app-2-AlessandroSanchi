@@ -31,5 +31,16 @@ def get_game_by_id(game_id):
     else:
 
      return None
+    
+
+
+def create_game(nome, categoria , numero_giocatori_massimo, durata_media,  ):
+    """Crea un nuovo canale."""
+    db = get_db()
+    cursor = db.execute(
+        "INSERT INTO giochi (nome, numero_giocatori_massimo, durata_media, categoria) VALUES (?, ?, ?, ?)", (nome, numero_giocatori_massimo, durata_media, categoria)
+    )
+    db.commit()
+    return cursor
 
     

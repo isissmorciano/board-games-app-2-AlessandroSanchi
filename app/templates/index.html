@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Giochi Disponibili</h1>
+<h1>Giochi Disponibili</h1>  
+<h1><a href="{{ url_for('main.game_create') }}">Crea gioco</a></h1>
+<br><br>
+
 
 {% for game in games %}
 
