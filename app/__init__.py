@@ -11,7 +11,7 @@ def create_app():
     # Altrimenti usa 'dev' (utile per non bloccarci se manca il file).
     app.config.from_mapping(
         SECRET_KEY=os.environ.get('SECRET_KEY', 'dev'),
-        DATABASE=os.path.join(app.instance_path, 'blog.sqlite'),
+        DATABASE=os.path.join(app.instance_path, 'video_app.sqlite'),
     )
     
 
